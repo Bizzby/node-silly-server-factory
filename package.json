@@ -1,0 +1,15 @@
+{
+  "name": "bizzby-silly-server-factory",
+  "version": "1.0.0",
+  "description": "a factory for making http servers with",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sandfox",
+  "license": "ISC",
+  "dependencies": {
+    "findhit-proxywrap": "^0.3.10",
+    "spdy": "^1.32.4"
+  }
+}

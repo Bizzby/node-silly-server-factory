@@ -1,0 +1,3 @@
+- Creates and returns an `http` server like thing.
+- Does not attach any even listeners, this is your task!
+- Does not "start" the server
