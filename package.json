@@ -1,6 +1,6 @@
 {
   "name": "bizzby-silly-server-factory",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "a factory for making http servers with",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "sandfox",
   "license": "ISC",
   "dependencies": {
-    "findhit-proxywrap": "^0.3.10",
-    "spdy": "^1.32.4"
+    "findhit-proxywrap": "^0.3.11",
+    "spdy": "^3.2.0"
   }
 }

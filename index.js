@@ -10,7 +10,7 @@ var spdy    = require('spdy');
 var proxywrap = require('findhit-proxywrap');
 
 
-module.exports = function createServer(opts){
+module.exports = function createServer(opts, requestListener){
 
     var server;
     var proxiedHttp;
@@ -51,19 +51,19 @@ module.exports = function createServer(opts){
             }
 
             proxiedHttp = proxywrap.proxy(spdy.server, {strict: false});
-            server = proxiedHttp.createServer(spdyOpts)
+            server = proxiedHttp.createServer(spdyOpts, requestListener)
         
         } else {
-            server = spdy.createServer(spdyOpts);
+            server = spdy.createServer(spdyOpts, requestListener);
         }
 
     } else {
 
         if(useProxyProtocol) {
             proxiedHttp = proxywrap.proxy(http, {strict: false});
-            server = proxiedHttp.createServer()
+            server = proxiedHttp.createServer(requestListener)
         } else {
-            server = http.createServer();
+            server = http.createServer(requestListener);
         }
 
     }

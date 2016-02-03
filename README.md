@@ -1,3 +1,3 @@
 - Creates and returns an `http` server like thing.
-- Does not attach any even listeners, this is your task!
+- Attaches the request listener for you (attaching listeners after instantion leads to duplicate requests and bad thing)
 - Does not "start" the server
